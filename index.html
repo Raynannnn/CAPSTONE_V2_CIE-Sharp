@@ -17,8 +17,8 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="lesson.html">Lessons</a>
-        <a href="#">About</a>
+        <a href="#features">Learning Features</a>
+        <a href="#developers">Developers</a>
     </nav>
 
 </header>
@@ -40,42 +40,134 @@
 
 </section>
 
-<section class="section">
+<section class="section" id="features">
 
-    <h2>Features</h2>
+    <h2>Learning Features</h2>
 
-    <div class="card">
-        <h3>Microgames</h3>
-        <p>Learn C# through fun and interactive challenges.</p>
-    </div>
+    <div class="features">
 
-    <div class="card">
-        <h3>Quizzes</h3>
-        <p>Practice syntax, variables, loops, and conditions.</p>
-    </div>
+        <button class="feature-card" onclick="showInfo('microgame')">
 
-    <div class="card">
-        <h3>Progress Tracking</h3>
-        <p>Monitor your learning journey and achievements.</p>
+            <h3>Microgames</h3>
+
+            <p>
+                Short interactive activities for practicing C# concepts.
+            </p>
+
+        </button>
+
+
+        <button class="feature-card" onclick="showInfo('quiz')">
+
+            <h3>Formative Quizzes</h3>
+
+            <p>
+                Short activities for checking understanding of C# concepts.
+            </p>
+
+        </button>
+
+
+        <button class="feature-card" onclick="showInfo('progress')">
+
+            <h3>Learning Modules</h3>
+
+            <p>
+                Structured lessons for learning fundamental C# concepts.
+            </p>
+
+        </button>
+
     </div>
 
 </section>
 
-<section class="section">
+<section class="section" id="developers">
 
-    <h2>Target Users</h2>
+    <h2>Researchers & Developers</h2>
 
-    <p>
-        Developed for 2nd Year ICT students of the College of
-        Industrial Education, Technological University of the
-        Philippines - Manila.
-    </p>
+    <button class="feature-card developer-button" onclick="showResearchers()">
+
+        <h3>CIE-Sharp Research Team</h3>
+
+        <p>
+            View the researchers and developers behind CIE-Sharp.
+        </p>
+
+    </button>
 
 </section>
 
+
+<!-- RESEARCHER INFORMATION BOX -->
+
+<div id="researcherBox" class="info-box">
+
+    <div class="info-content">
+
+        <button class="close-btn" onclick="closeResearchers()">
+            ×
+        </button>
+
+        <h2>CIE-Sharp Research Team</h2>
+
+        <p class="developer-intro">
+            Researchers and developers of the web-based microgame
+            learning material for supplementing ICT students'
+            motivation in using C#.
+        </p>
+
+        <div class="researcher-list">
+
+            <p>Domingo, Noe D.</p>
+            <p>Gidayawan, Joses D.</p>
+            <p>Inquig, Precious Gold B.</p>
+            <p>Marciales, Raynan A.</p>
+            <p>Sorinio, Bea A.</p>
+
+        </div>
+
+        <p class="developer-school">
+            BSIE-ICT | College of Industrial Education<br>
+            Technological University of the Philippines – Manila
+        </p>
+
+    </div>
+
+</div>
+
+<div id="infoBox" class="info-box">
+
+    <div class="info-content">
+
+        <button class="close-btn" onclick="closeInfo()">×</button>
+
+        <h2 id="infoTitle"></h2>
+
+        <p id="infoText"></p>
+
+    </div>
+
+</div>
 <footer>
     <p>© 2026 CIE-Sharp | BSIE-ICT Research Project</p>
 </footer>
+
+<script>
+
+function showResearchers(){
+
+    document.getElementById("researcherBox").style.display = "flex";
+
+}
+
+function closeResearchers(){
+
+    document.getElementById("researcherBox").style.display = "none";
+
+}
+
+</script>
 
 </body>
 </html>
