@@ -1,0 +1,482 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#1e3a8a;
+    color:white;
+    padding:18px 60px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:70px;
+}
+
+.logo{
+    color:white;
+}
+
+.logo h2{
+    font-size:26px;
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#bfdbfe;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+    color:white;
+    background:#2563eb;
+    text-decoration:none;
+    padding:9px 15px;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#1d4ed8;
+    transform:translateX(-3px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    background:white;
+    text-align:center;
+    padding:80px 20px;
+    animation:fadeIn .7s ease;
+}
+
+.hero h1{
+    color:#1e3a8a;
+    font-size:46px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:0 auto 30px;
+    font-size:18px;
+    color:#555;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+    display:inline-block;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:13px 28px;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+    text-align:center;
+    animation:fadeIn .8s ease;
+}
+
+.section h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.section p{
+    color:#555;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    background:white;
+    padding:25px;
+    margin:15px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.card h2{
+    color:#1e3a8a;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#555;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* =========================
+   TARGET USERS
+========================= */
+
+.target-users{
+    width:80%;
+    max-width:900px;
+    margin:50px auto;
+    padding:35px;
+    background:white;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.target-users h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+/* =========================
+   LESSON PAGE
+========================= */
+
+.modules{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.modules .card{
+    margin:0;
+}
+
+.modules .card h3{
+    font-size:16px;
+}
+
+.modules .card h2{
+    font-size:22px;
+}
+
+.modules button{
+    width:100%;
+    padding:11px;
+    border:none;
+    border-radius:6px;
+    background:#2563eb;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.modules button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.modules button:disabled{
+    background:#cbd5e1;
+    color:#64748b;
+    cursor:not-allowed;
+    transform:none;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    padding:30px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.progress h2{
+    color:#1e3a8a;
+    margin-bottom:18px;
+}
+
+progress{
+    width:100%;
+    height:22px;
+}
+
+.progress p{
+    margin-top:12px;
+    font-weight:bold;
+    color:#555;
+}
+
+/* =========================
+   OBJECTIVE
+========================= */
+
+.objective{
+    width:80%;
+    max-width:900px;
+    margin:50px auto;
+    padding:35px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.objective h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.objective p{
+    color:#555;
+}
+
+/* =========================
+   LESSON CONTENT
+========================= */
+
+.lesson-content{
+    width:85%;
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.lesson-content h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.lesson-content h3{
+    color:#2563eb;
+    margin-top:25px;
+    margin-bottom:10px;
+}
+
+.lesson-content p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* CODE EXAMPLE */
+
+.code-box{
+    background:#1e293b;
+    color:#e2e8f0;
+    padding:20px;
+    border-radius:8px;
+    margin:20px 0;
+    overflow-x:auto;
+    font-family:Consolas, monospace;
+    line-height:1.6;
+}
+
+/* =========================
+   MICROGAME AREA
+========================= */
+
+.game-area{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    padding:35px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.game-area h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.game-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.game-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    header{
+        padding:18px 30px;
+    }
+
+    .modules{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:650px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    nav{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        width:95%;
+        font-size:16px;
+    }
+
+    .modules{
+        grid-template-columns:1fr;
+    }
+
+    .progress,
+    .objective,
+    .target-users{
+        width:90%;
+    }
+
+    .lesson-content{
+        width:90%;
+        padding:25px;
+    }
+
+}
