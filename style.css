@@ -11,19 +11,19 @@ body{
     line-height:1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
+/*HEADER*/
 
 header{
     background:#1e3a8a;
     color:white;
-    padding:18px 60px;
+    padding:14px 50px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    min-height:70px;
+    min-height:75px;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
 }
+
 
 .logo{
     color:white;
@@ -597,4 +597,20 @@ footer p{
     font-size:14px;
     color:#666;
     margin-top:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo h2{
+    font-size:26px;
+}
+
+.logo img{
+    width:100px;
+    height:auto;
+    object-fit:contain;
 }

@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CIE-Sharp</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
+
+<!-- HEADER -->
 
 <header>
 
     <div class="logo">
+        <img src="images/cie-sharp-logo.png" alt="CIE-Sharp Logo">
         <h2>CIE-Sharp</h2>
     </div>
+
 
     <nav>
         <a href="index.html">Home</a>
@@ -23,80 +33,149 @@
 
 </header>
 
+
+
+<!-- HERO -->
+
 <section class="hero">
 
-   <h1>Welcome to CIE-Sharp</h1>
+    <h1>Welcome to CIE-Sharp</h1>
 
     <p>
-    CIE-Sharp is a web-based microgame learning material designed to
-    supplement ICT students' motivation in learning the C#
-    programming language through interactive lessons and
-    game-based activities.
+
+        CIE-Sharp is a web-based microgame learning material designed
+        to supplement ICT students' motivation in learning the C#
+        programming language through interactive lessons and
+        game-based activities.
+
     </p>
 
+
     <button onclick="location.href='lesson.html'" class="btn">
-    Start Learning
+
+        Start Learning
+
     </button>
 
 </section>
+
+
+
+<!-- LEARNING FEATURES -->
 
 <section class="section" id="features">
 
     <h2>Learning Features</h2>
 
+
     <div class="features">
+
+
+        <!-- MICROGAMES -->
 
         <button class="feature-card" onclick="showInfo('microgame')">
 
             <h3>Microgames</h3>
 
             <p>
-                Short interactive activities for practicing C# concepts.
+
+                Short interactive activities for practicing
+                fundamental C# programming concepts.
+
             </p>
 
         </button>
 
+
+
+        <!-- QUIZZES -->
 
         <button class="feature-card" onclick="showInfo('quiz')">
 
             <h3>Formative Quizzes</h3>
 
             <p>
-                Short activities for checking understanding of C# concepts.
+
+                Short activities for checking understanding
+                of C# programming concepts.
+
             </p>
 
         </button>
 
 
-        <button class="feature-card" onclick="showInfo('progress')">
+
+        <!-- LEARNING MODULES -->
+
+        <button class="feature-card" onclick="showInfo('modules')">
 
             <h3>Learning Modules</h3>
 
             <p>
-                Structured lessons for learning fundamental C# concepts.
+
+                Structured lessons for learning fundamental
+                C# programming concepts.
+
             </p>
 
         </button>
+
 
     </div>
 
 </section>
 
+
+
+<!-- FEATURE INFORMATION BOX -->
+
+<div id="featureBox" class="info-box">
+
+    <div class="info-content">
+
+        <button class="close-btn" onclick="closeInfo()">
+
+            ×
+
+        </button>
+
+
+        <h2 id="infoTitle"></h2>
+
+        <p id="infoText"></p>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- RESEARCHERS -->
+
 <section class="section" id="developers">
 
     <h2>Researchers & Developers</h2>
 
-    <button class="feature-card developer-button" onclick="showResearchers()">
+
+    <button
+        class="feature-card developer-button"
+        onclick="showResearchers()"
+    >
 
         <h3>CIE-Sharp Research Team</h3>
 
         <p>
-            View the researchers and developers behind CIE-Sharp.
+
+            View the researchers and developers
+            behind CIE-Sharp.
+
         </p>
 
     </button>
 
 </section>
+
 
 
 <!-- RESEARCHER INFORMATION BOX -->
@@ -105,69 +184,143 @@
 
     <div class="info-content">
 
-        <button class="close-btn" onclick="closeResearchers()">
+
+        <button
+            class="close-btn"
+            onclick="closeResearchers()"
+        >
+
             ×
+
         </button>
+
 
         <h2>CIE-Sharp Research Team</h2>
 
+
         <p class="developer-intro">
-            Researchers and developers of the web-based microgame
-            learning material for supplementing ICT students'
-            motivation in using C#.
+
+            Researchers and developers of the web-based
+            microgame learning material for supplementing
+            ICT students' motivation in using C#.
+
         </p>
+
 
         <div class="researcher-list">
 
             <p>Domingo, Noe D.</p>
+
             <p>Gidayawan, Joses D.</p>
+
             <p>Inquig, Precious Gold B.</p>
+
             <p>Marciales, Raynan A.</p>
+
             <p>Sorinio, Bea A.</p>
 
         </div>
 
+
         <p class="developer-school">
+
             BSIE-ICT | College of Industrial Education<br>
+
             Technological University of the Philippines – Manila
+
         </p>
 
-    </div>
-
-</div>
-
-<div id="infoBox" class="info-box">
-
-    <div class="info-content">
-
-        <button class="close-btn" onclick="closeInfo()">×</button>
-
-        <h2 id="infoTitle"></h2>
-
-        <p id="infoText"></p>
 
     </div>
 
 </div>
+
+
+
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 CIE-Sharp | BSIE-ICT Research Project</p>
+    <p>
+        © 2026 CIE-Sharp | BSIE-ICT Research Project
+    </p>
 </footer>
 
-<script>
 
+
+<!-- JAVASCRIPT -->
+<script>
+/* FEATURE INFORMATION */
+
+function showInfo(feature){
+
+    var title = document.getElementById("infoTitle");
+
+    var text = document.getElementById("infoText");
+
+    var box = document.getElementById("featureBox");
+
+
+    if(feature == "microgame"){
+
+        title.innerHTML = "Microgames";
+
+        text.innerHTML =
+        "CIE-Sharp uses short, interactive microgame activities to supplement ICT students' motivation in learning the C# programming language. The activities provide opportunities for students to practice fundamental C# programming concepts in an interactive learning environment.";
+
+    }
+
+
+    else if(feature == "quiz"){
+
+        title.innerHTML = "Formative Quizzes";
+
+        text.innerHTML =
+        "The formative quizzes provide short learning activities that allow students to check their understanding of fundamental C# programming concepts. These activities can provide feedback that helps students identify areas that need further practice.";
+
+    }
+
+
+    else if(feature == "modules"){
+
+        title.innerHTML = "Learning Modules";
+
+        text.innerHTML =
+        "The learning modules provide structured lessons covering fundamental C# programming concepts. The modules are designed to introduce concepts before students proceed to interactive microgame activities.";
+
+    }
+
+
+    box.style.display = "flex";
+
+}
+
+
+
+/* CLOSE FEATURE INFORMATION */
+function closeInfo(){
+    document.getElementById("featureBox").style.display = "none";
+}
+
+
+
+/* RESEARCHERS */
 function showResearchers(){
 
     document.getElementById("researcherBox").style.display = "flex";
 
 }
 
+/* CLOSE RESEARCHERS */
 function closeResearchers(){
 
     document.getElementById("researcherBox").style.display = "none";
 
 }
 
+
 </script>
 
+
 </body>
+
 </html>
