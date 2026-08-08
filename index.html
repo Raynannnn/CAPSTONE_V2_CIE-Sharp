@@ -182,42 +182,146 @@
 
 <div id="researcherBox" class="info-box">
 
-    <div class="info-content">
+    <div class="researcher-content">
 
-
-        <button
-            class="close-btn"
-            onclick="closeResearchers()"
-        >
-
+        <button class="close-btn" onclick="closeResearchers()">
             ×
-
         </button>
 
+        <h2>Meet the CIE-Sharp Research Team</h2>
 
-        <h2>CIE-Sharp Research Team</h2>
-
-
-        <p class="developer-intro">
-
-            Researchers and developers of the web-based
-            microgame learning material for supplementing
-            ICT students' motivation in using C#.
-
+        <p class="researcher-intro">
+            CIE-Sharp was developed through the collaborative work of
+            BSIE-ICT students of the College of Industrial Education,
+            Technological University of the Philippines – Manila.
+            The research team worked together in planning, designing,
+            developing, and evaluating the web-based microgame
+            learning material for C# programming.
         </p>
 
 
-        <div class="researcher-list">
+        <!-- RESEARCHER SLIDES -->
 
-            <p>Domingo, Noe D.</p>
+        <div class="researcher-slider">
 
-            <p>Gidayawan, Joses D.</p>
+            <!-- MARCIALES -->
 
-            <p>Inquig, Precious Gold B.</p>
+            <div class="researcher-slide active">
 
-            <p>Marciales, Raynan A.</p>
+                <img src="images/marciales.jpg"
+                     alt="Raynan Marciales">
 
-            <p>Sorinio, Bea A.</p>
+                <h3>Marciales, Raynan A.</h3>
+
+                <h4>Main Developer</h4>
+
+                <p>
+                    Responsible for the development and implementation
+                    of the CIE-Sharp web-based learning material,
+                    including its interface, learning modules, and
+                    interactive microgame components.
+                </p>
+
+            </div>
+
+
+            <!-- INQUIG -->
+
+            <div class="researcher-slide">
+
+                <img src="images/inquig.jpg"
+                     alt="Precious Gold Inquig">
+
+                <h3>Inquig, Precious Gold B.</h3>
+
+                <h4>Research Leader</h4>
+
+                <p>
+                    Led the research team in organizing the research
+                    activities, coordinating the study, and guiding
+                    the overall development of the CIE-Sharp project.
+                </p>
+
+            </div>
+
+
+            <!-- DOMINGO -->
+
+            <div class="researcher-slide">
+
+                <img src="images/domingo.jpg"
+                     alt="Noe Domingo">
+
+                <h3>Domingo, Noe D.</h3>
+
+                <h4>Researcher & Developer</h4>
+
+                <p>
+                    Contributed to the research, planning, and
+                    development activities of the CIE-Sharp
+                    learning material.
+                </p>
+
+            </div>
+
+
+            <!-- GIDAYAWAN -->
+
+            <div class="researcher-slide">
+
+                <img src="images/gidayawan.jpg"
+                     alt="Joses Gidayawan">
+
+                <h3>Gidayawan, Joses D.</h3>
+
+                <h4>Researcher & Developer</h4>
+
+                <p>
+                    Contributed to the research and development
+                    activities supporting the design of the
+                    CIE-Sharp instructional material.
+                </p>
+
+            </div>
+
+
+            <!-- SORINIO -->
+
+            <div class="researcher-slide">
+
+                <img src="images/sorinio.jpg"
+                     alt="Bea Sorinio">
+
+                <h3>Sorinio, Bea A.</h3>
+
+                <h4>Researcher & Developer</h4>
+
+                <p>
+                    Contributed to the research, documentation,
+                    and development activities of the CIE-Sharp
+                    project.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDER BUTTONS -->
+
+        <div class="slider-buttons">
+
+            <button onclick="previousResearcher()">
+                ← Previous
+            </button>
+
+            <span id="researcherNumber">
+                1 / 5
+            </span>
+
+            <button onclick="nextResearcher()">
+                Next →
+            </button>
 
         </div>
 
@@ -225,8 +329,7 @@
         <p class="developer-school">
 
             BSIE-ICT | College of Industrial Education<br>
-
-            Technological University of the Philippines – Manila
+            Technological University of the Philippines  Manila
 
         </p>
 
@@ -317,6 +420,63 @@ function closeResearchers(){
 
 }
 
+var currentResearcher = 0;
+
+var researchers = document.querySelectorAll(".researcher-slide");
+
+
+function showResearcher(index){
+
+    researchers.forEach(function(slide){
+        slide.classList.remove("active");
+    });
+
+    researchers[index].classList.add("active");
+
+    document.getElementById("researcherNumber").innerHTML =
+        (index + 1) + " / " + researchers.length;
+}
+
+
+function nextResearcher(){
+
+    currentResearcher++;
+
+    if(currentResearcher >= researchers.length){
+        currentResearcher = 0;
+    }
+
+    showResearcher(currentResearcher);
+}
+
+
+function previousResearcher(){
+
+    currentResearcher--;
+
+    if(currentResearcher < 0){
+        currentResearcher = researchers.length - 1;
+    }
+
+    showResearcher(currentResearcher);
+}
+
+
+function showResearchers(){
+
+    currentResearcher = 0;
+
+    showResearcher(currentResearcher);
+
+    document.getElementById("researcherBox").style.display = "flex";
+}
+
+
+function closeResearchers(){
+
+    document.getElementById("researcherBox").style.display = "none";
+
+}
 
 </script>
 
