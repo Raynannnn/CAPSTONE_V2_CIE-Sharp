@@ -691,99 +691,407 @@ footer p{
 
 }
 
+
+
 /* =========================
-   RESEARCHER BOX
+   RESEARCHER INFORMATION BOX
+========================= */
+
+#researcherBox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    z-index:1000;
+}
+
+
+/* =========================
+   NORMAL RESEARCHER MODAL
 ========================= */
 
 .researcher-content{
     background:white;
     width:90%;
-    max-width:650px;
-    padding:35px;
-    border-radius:12px;
+    max-width:720px;
+    height:560px;
+    padding:30px 40px 20px;
+    border-radius:14px;
     position:relative;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-    animation:popup .3s ease;
-}
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
+    animation:fadeIn .3s ease;
 
-.researcher-content h2{
-    color:#1e3a8a;
-    margin-bottom:15px;
-}
-
-.researcher-intro{
-    color:#555;
-    font-size:15px;
-    line-height:1.7;
-    margin-bottom:25px;
-}
-
-
-/* RESEARCHER SLIDES */
-
-.researcher-slide{
-    display:none;
-    animation:fadeIn .4s ease;
-}
-
-.researcher-slide.active{
-    display:block;
-}
-
-.researcher-slide img{
-    width:150px;
-    height:150px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #2563eb;
-    margin-bottom:15px;
-}
-
-.researcher-slide h3{
-    color:#1e3a8a;
-    font-size:22px;
-    margin-bottom:3px;
-}
-
-.researcher-slide h4{
-    color:#2563eb;
-    margin-bottom:12px;
-}
-
-.researcher-slide p{
-    color:#555;
-    line-height:1.7;
-}
-
-
-/* SLIDER BUTTONS */
-
-.slider-buttons{
     display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
-    margin-top:25px;
+    flex-direction:column;
 }
 
-.slider-buttons button{
+
+/* =========================
+   TITLE
+========================= */
+
+.researcher-title{
+    text-align:center;
+    color:#1e3a8a;
+    font-size:25px;
+    margin:0 30px 15px;
+    flex-shrink:0;
+}
+
+
+/* =========================
+   COUNTER
+========================= */
+
+.researcher-counter{
+    text-align:center;
+    margin-bottom:10px;
+    flex-shrink:0;
+}
+
+.researcher-counter span{
+    display:inline-block;
+    background:#1e3a8a;
+    color:white;
+    padding:5px 13px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   RESEARCHER PROFILE
+========================= */
+
+.researcher-profile{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+
+    height:275px;
+    flex-shrink:0;
+}
+
+
+/* =========================
+   RESEARCHER IMAGE
+========================= */
+
+.researcher-image{
+    width:185px;
+    height:215px;
+
+    flex-shrink:0;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    background:#f4f6f9;
+
+    border:3px solid #e2e8f0;
+}
+
+.researcher-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+/* =========================
+   RESEARCHER DETAILS
+========================= */
+
+.researcher-info{
+    flex:1;
+    max-width:390px;
+}
+
+.researcher-info h2{
+    color:#1e3a8a;
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.researcher-info h3{
+    color:#2563eb;
+    font-size:17px;
+    margin-bottom:14px;
+}
+
+.researcher-info p{
+    color:#555;
+    line-height:1.7;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.researcher-navigation{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-top:10px;
+
+    flex-shrink:0;
+}
+
+.researcher-navigation button{
     border:none;
     background:#2563eb;
     color:white;
-    padding:9px 15px;
-    border-radius:6px;
+
+    padding:10px 18px;
+
+    border-radius:7px;
+
+    font-size:14px;
     font-weight:bold;
+
     cursor:pointer;
+
     transition:.3s;
 }
 
-.slider-buttons button:hover{
+.researcher-navigation button:hover{
     background:#1d4ed8;
     transform:translateY(-2px);
 }
 
-.slider-buttons span{
+.researcher-navigation button:disabled{
+    background:#cbd5e1;
+    color:#64748b;
+    cursor:not-allowed;
+    transform:none;
+}
+
+
+/* ONLY ONE 1 / 5 */
+
+#researcherNumberBottom{
     color:#1e3a8a;
+    font-size:15px;
     font-weight:bold;
+    text-align:center;
+}
+
+
+/* =========================
+   SCHOOL INFORMATION
+========================= */
+
+.researcher-school{
+    width:100%;
+
+    text-align:center;
+
+    border-top:1px solid #e2e8f0;
+
+    padding-top:12px;
+
+    margin-top:auto;
+
+    flex-shrink:0;
+}
+
+.researcher-school p{
+    color:#64748b;
+    font-size:13px;
+    line-height:1.5;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-btn{
+    position:absolute;
+
+    right:15px;
+    top:8px;
+
+    width:35px;
+    height:35px;
+
+    border:none;
+    background:none;
+
+    font-size:30px;
+    line-height:30px;
+
+    color:#64748b;
+
+    cursor:pointer;
+
+    z-index:20;
+}
+
+.close-btn:hover{
+    color:#1e3a8a;
+}
+
+
+/* =========================
+   FINAL TEAM SUMMARY
+========================= */
+
+.research-team-summary{
+    display:none;
+
+    width:100%;
+    height:100%;
+
+    text-align:center;
+
+    padding:15px 10px 5px;
+
+    overflow-y:auto;
+}
+
+.research-team-summary h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.research-team-summary > p{
+    color:#555;
+    line-height:1.7;
+    max-width:580px;
+    margin:0 auto 20px;
+}
+
+
+/* =========================
+   TEAM LIST
+========================= */
+
+.researcher-list{
+    background:#f4f6f9;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px auto;
+
+    max-width:500px;
+}
+
+.researcher-list p{
+    color:#1e3a8a;
+
+    font-weight:bold;
+
+    margin:8px 0;
+}
+
+
+/* =========================
+   FINAL CLOSE BUTTON
+========================= */
+
+.exit-researcher-btn{
+    display:block;
+
+    margin:20px auto 10px;
+
+    background:#1e3a8a;
+
+    color:white;
+
+    border:none;
+
+    padding:11px 28px;
+
+    border-radius:7px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.exit-researcher-btn:hover{
+    background:#172554;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE RESEARCHER MODAL
+========================= */
+
+@media(max-width:650px){
+
+    #researcherBox{
+        padding:15px;
+    }
+
+    .researcher-content{
+        width:95%;
+        height:620px;
+        padding:25px 20px 15px;
+    }
+
+    .researcher-title{
+        font-size:21px;
+        margin-bottom:12px;
+    }
+
+    .researcher-profile{
+        flex-direction:column;
+        gap:15px;
+        height:360px;
+    }
+
+    .researcher-image{
+        width:145px;
+        height:170px;
+    }
+
+    .researcher-info{
+        text-align:center;
+        max-width:100%;
+    }
+
+    .researcher-info h2{
+        font-size:20px;
+    }
+
+    .researcher-info h3{
+        font-size:15px;
+        margin-bottom:8px;
+    }
+
+    .researcher-info p{
+        font-size:14px;
+    }
+
+    .researcher-navigation button{
+        padding:9px 12px;
+        font-size:13px;
+    }
+
+    .researcher-school p{
+        font-size:11px;
+    }
+
 }
