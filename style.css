@@ -11,7 +11,10 @@ body{
     line-height:1.6;
 }
 
-/*HEADER*/
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:#1e3a8a;
@@ -24,34 +27,57 @@ header{
     box-shadow:0 2px 8px rgba(0,0,0,.12);
 }
 
-
 .logo{
-    color:white;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
 }
 
 .logo h2{
-    font-size:26px;
+    font-size:25px;
+    margin:0;
+    line-height:1.1;
     letter-spacing:.5px;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    color:#dbeafe;
+    margin-top:3px;
 }
 
 nav{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:8px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    font-size:15px;
     font-weight:bold;
+    padding:9px 13px;
+    border-radius:6px;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#bfdbfe;
+    background:#2563eb;
+    color:white;
 }
 
-/* BACK BUTTON */
+
+/* =========================
+   BACK BUTTON
+========================= */
 
 .back-btn{
     color:white;
@@ -68,6 +94,7 @@ nav a:hover{
     background:#1d4ed8;
     transform:translateX(-3px);
 }
+
 
 /* =========================
    HERO
@@ -93,8 +120,9 @@ nav a:hover{
     color:#555;
 }
 
+
 /* =========================
-   BUTTON
+   MAIN BUTTON
 ========================= */
 
 .btn{
@@ -116,6 +144,7 @@ nav a:hover{
     transform:translateY(-2px);
 }
 
+
 /* =========================
    GENERAL SECTION
 ========================= */
@@ -136,6 +165,7 @@ nav a:hover{
 .section p{
     color:#555;
 }
+
 
 /* =========================
    CARDS
@@ -169,8 +199,9 @@ nav a:hover{
     color:#555;
 }
 
+
 /* =========================
-   FEATURES
+   LEARNING FEATURES
 ========================= */
 
 .features{
@@ -178,6 +209,32 @@ nav a:hover{
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
+
+.feature-card{
+    background:white;
+    border:none;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    cursor:pointer;
+    text-align:center;
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.feature-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.feature-card p{
+    color:#555;
+}
+
 
 /* =========================
    TARGET USERS
@@ -199,8 +256,9 @@ nav a:hover{
     margin-bottom:15px;
 }
 
+
 /* =========================
-   LESSON PAGE
+   LESSON MODULES
 ========================= */
 
 .modules{
@@ -249,6 +307,7 @@ nav a:hover{
     transform:none;
 }
 
+
 /* =========================
    PROGRESS
 ========================= */
@@ -280,8 +339,9 @@ progress{
     color:#555;
 }
 
+
 /* =========================
-   OBJECTIVE
+   LEARNING OBJECTIVE
 ========================= */
 
 .objective{
@@ -303,6 +363,7 @@ progress{
 .objective p{
     color:#555;
 }
+
 
 /* =========================
    LESSON CONTENT
@@ -334,7 +395,10 @@ progress{
     margin-bottom:15px;
 }
 
-/* CODE EXAMPLE */
+
+/* =========================
+   CODE EXAMPLE
+========================= */
 
 .code-box{
     background:#1e293b;
@@ -346,6 +410,7 @@ progress{
     font-family:Consolas, monospace;
     line-height:1.6;
 }
+
 
 /* =========================
    MICROGAME AREA
@@ -383,6 +448,103 @@ progress{
     transform:translateY(-2px);
 }
 
+
+/* =========================
+   INFORMATION BOX
+========================= */
+
+.info-box{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.info-content{
+    background:white;
+    width:90%;
+    max-width:600px;
+    padding:35px;
+    border-radius:10px;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    animation:popup .3s ease;
+}
+
+.info-content h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.info-content p{
+    color:#555;
+    line-height:1.7;
+}
+
+.close-btn{
+    position:absolute;
+    right:15px;
+    top:8px;
+    border:none;
+    background:none;
+    font-size:28px;
+    color:#555;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.close-btn:hover{
+    color:#1e3a8a;
+    transform:scale(1.1);
+}
+
+
+/* =========================
+   RESEARCHER BUTTON
+========================= */
+
+.developer-button{
+    width:300px;
+    margin:auto;
+    display:block;
+}
+
+
+/* =========================
+   RESEARCHER INFORMATION
+========================= */
+
+.developer-intro{
+    margin-bottom:20px;
+}
+
+.researcher-list{
+    background:#f4f6f9;
+    padding:15px;
+    border-radius:8px;
+    margin:20px 0;
+}
+
+.researcher-list p{
+    color:#1e3a8a;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.developer-school{
+    text-align:center;
+    font-size:14px;
+    color:#666;
+    margin-top:20px;
+}
+
+
 /* =========================
    FOOTER
 ========================= */
@@ -399,8 +561,9 @@ footer p{
     font-size:14px;
 }
 
+
 /* =========================
-   ANIMATION
+   ANIMATIONS
 ========================= */
 
 @keyframes fadeIn{
@@ -417,6 +580,21 @@ footer p{
 
 }
 
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:scale(.95) translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+
+}
+
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -424,7 +602,7 @@ footer p{
 @media(max-width:900px){
 
     header{
-        padding:18px 30px;
+        padding:15px 30px;
     }
 
     .modules{
@@ -437,6 +615,7 @@ footer p{
 
 }
 
+
 @media(max-width:650px){
 
     header{
@@ -445,10 +624,32 @@ footer p{
         text-align:center;
     }
 
+    .logo{
+        justify-content:center;
+    }
+
+    .logo img{
+        width:60px;
+        height:60px;
+    }
+
+    .logo h2{
+        font-size:22px;
+    }
+
+    .logo span{
+        font-size:11px;
+    }
+
     nav{
-        gap:15px;
+        gap:5px;
         flex-wrap:wrap;
         justify-content:center;
+    }
+
+    nav a{
+        font-size:14px;
+        padding:7px 10px;
     }
 
     .hero{
@@ -479,138 +680,13 @@ footer p{
         padding:25px;
     }
 
-}
+    .developer-button{
+        width:90%;
+        max-width:300px;
+    }
 
-/* LEARNING FEATURES */
+    .info-content{
+        padding:30px 25px;
+    }
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.feature-card{
-    background:white;
-    border:none;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,.08);
-    cursor:pointer;
-    text-align:center;
-    transition:.3s;
-}
-
-.feature-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 18px rgba(0,0,0,.12);
-}
-
-.feature-card h3{
-    color:#2563eb;
-    margin-bottom:10px;
-}
-
-.feature-card p{
-    color:#555;
-}
-
-/* INFORMATION BOX */
-
-.info-box{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.45);
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
-}
-
-.info-content{
-    background:white;
-    width:90%;
-    max-width:600px;
-    padding:35px;
-    border-radius:10px;
-    position:relative;
-    animation:fadeIn .3s ease;
-}
-
-.info-content h2{
-    color:#1e3a8a;
-    margin-bottom:15px;
-}
-
-.info-content p{
-    color:#555;
-    line-height:1.7;
-}
-
-.close-btn{
-    position:absolute;
-    right:15px;
-    top:8px;
-    border:none;
-    background:none;
-    font-size:28px;
-    color:#555;
-    cursor:pointer;
-}
-
-.close-btn:hover{
-    color:#1e3a8a;
-}
-
-/* DEVELOPER BUTTON */
-
-.developer-button{
-    width:300px;
-    margin:auto;
-    display:block;
-}
-
-
-/* RESEARCHER LIST */
-
-.developer-intro{
-    margin-bottom:20px;
-}
-
-.researcher-list{
-    background:#f4f6f9;
-    padding:15px;
-    border-radius:8px;
-    margin:20px 0;
-}
-
-.researcher-list p{
-    color:#1e3a8a;
-    font-weight:bold;
-    margin:8px 0;
-}
-
-.developer-school{
-    text-align:center;
-    font-size:14px;
-    color:#666;
-    margin-top:20px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo h2{
-    font-size:26px;
-}
-
-.logo img{
-    width:100px;
-    height:auto;
-    object-fit:contain;
 }
