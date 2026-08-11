@@ -7,32 +7,52 @@ function showInfo(feature){
     var box = document.getElementById("featureBox");
 
 
-    if(feature == "microgame"){
+    if(feature == "progressive"){
 
-        title.innerHTML = "Microgames";
+        title.innerHTML = "Progressive Syntax Challenges";
 
         text.innerHTML =
-        "CIE-Sharp uses short, interactive microgame activities to supplement ICT students' motivation in learning the C# programming language. The activities provide opportunities for students to practice fundamental C# programming concepts in an interactive learning environment.";
+        "CIE-Sharp provides progressive C# syntax challenges that begin with Beginner-level activities and gradually increase toward Basic, Intermediate, and Advanced levels. Activities are unlocked progressively to support gradual practice.";
 
     }
 
 
-    else if(feature == "quiz"){
+    else if(feature == "guided"){
 
-        title.innerHTML = "Formative Quizzes";
+        title.innerHTML = "Guided Problem-Solving";
 
         text.innerHTML =
-        "The formative quizzes provide short learning activities that allow students to check their understanding of fundamental C# programming concepts. These activities can provide feedback that helps students identify areas that need further practice.";
+        "CIE-Sharp guides learners through the Understand, Plan, Code, and Test steps. Activities include worked examples, fill-in-the-blank code, partial code, and solve-from-scratch activities.";
 
     }
 
 
-    else if(feature == "modules"){
+    else if(feature == "gamification"){
 
-        title.innerHTML = "Learning Modules";
+        title.innerHTML = "Interactive Learning & Gamification";
 
         text.innerHTML =
-        "The learning modules provide structured lessons covering fundamental C# programming concepts. The modules are designed to introduce concepts before students proceed to interactive microgame activities.";
+        "CIE-Sharp uses interactive microgames such as Arrange the Syntax, Complete the Code, Find the Error, Fix the Code, and Choose the Correct Fix. Points and levels are used to support engaging practice.";
+
+    }
+
+
+    else if(feature == "progress"){
+
+        title.innerHTML = "Progress Tracking & Self-Learning";
+
+        text.innerHTML =
+        "Learners can monitor completed challenges, scores, remaining activities, and their overall progress. Activities can also be retried or replayed for additional practice.";
+
+    }
+
+
+    else if(feature == "feedback"){
+
+        title.innerHTML = "Immediate Feedback & Error Support";
+
+        text.innerHTML =
+        "CIE-Sharp provides immediate feedback through simple error explanations, hints, error categorization, correction attempts, and retry options.";
 
     }
 
@@ -43,9 +63,11 @@ function showInfo(feature){
 
 
 
-/* CLOSE FEATURE INFORMATION */
+
 function closeInfo(){
+
     document.getElementById("featureBox").style.display = "none";
+
 }
 
 
@@ -280,61 +302,6 @@ function closeResearchers(){
 }
 
 
-/* =========================
-   FEATURE INFORMATION
-========================= */
 
-function showInfo(feature){
-
-    var title = document.getElementById("infoTitle");
-
-    var text = document.getElementById("infoText");
-
-    var box = document.getElementById("featureBox");
-
-
-    if(feature == "microgame"){
-
-        title.innerHTML = "Microgames";
-
-        text.innerHTML =
-        "CIE-Sharp uses short, interactive microgame activities to supplement ICT students' motivation in learning the C# programming language. The activities provide opportunities for students to practice fundamental C# programming concepts in an interactive learning environment.";
-
-    }
-
-    else if(feature == "quiz"){
-
-        title.innerHTML = "Formative Quizzes";
-
-        text.innerHTML =
-        "The formative quizzes provide short learning activities that allow students to check their understanding of fundamental C# programming concepts. These activities can provide feedback that helps students identify areas that need further practice.";
-
-    }
-
-    else if(feature == "modules"){
-
-        title.innerHTML = "Learning Modules";
-
-        text.innerHTML =
-        "The learning modules provide structured lessons covering fundamental C# programming concepts. The modules are designed to introduce concepts before students proceed to interactive microgame activities.";
-
-    }
-
-
-    box.style.display = "flex";
-
-}
-
-
-/* =========================
-   CLOSE FEATURE BOX
-========================= */
-
-function closeInfo(){
-
-    document.getElementById("featureBox").style.display =
-        "none";
-
-}
 
 
