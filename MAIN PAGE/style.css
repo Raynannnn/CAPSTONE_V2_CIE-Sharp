@@ -12,9 +12,7 @@ body{
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/*HEADER */
 
 header{
     background:#1e3a8a;
@@ -96,9 +94,7 @@ nav a:hover{
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     background:white;
@@ -167,9 +163,7 @@ nav a:hover{
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .card{
     background:white;
@@ -236,9 +230,7 @@ nav a:hover{
 }
 
 
-/* =========================
-   TARGET USERS
-========================= */
+/*TARGET USERS*/
 
 .target-users{
     width:80%;
@@ -308,9 +300,7 @@ nav a:hover{
 }
 
 
-/* =========================
-   PROGRESS
-========================= */
+/* PROGRESS */
 
 .progress{
     width:80%;
@@ -365,9 +355,7 @@ progress{
 }
 
 
-/* =========================
-   LESSON CONTENT
-========================= */
+/* LESSON CONTENT */
 
 .lesson-content{
     width:85%;
@@ -412,9 +400,7 @@ progress{
 }
 
 
-/* =========================
-   MICROGAME AREA
-========================= */
+/* MICROGAME AREA */
 
 .game-area{
     width:90%;
@@ -449,9 +435,7 @@ progress{
 }
 
 
-/* =========================
-   INFORMATION BOX
-========================= */
+/*INFORMATION BOX */
 
 .info-box{
     display:none;
@@ -505,9 +489,7 @@ progress{
 }
 
 
-/* =========================
-   RESEARCHER BUTTON
-========================= */
+/* RESEARCHER BUTTON*/
 
 .developer-button{
     width:300px;
@@ -516,9 +498,7 @@ progress{
 }
 
 
-/* =========================
-   RESEARCHER INFORMATION
-========================= */
+/* RESEARCHER INFORMATION */
 
 .developer-intro{
     margin-bottom:20px;
@@ -545,9 +525,7 @@ progress{
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     background:#1e3a8a;
@@ -562,9 +540,7 @@ footer p{
 }
 
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* ANIMATIONS */
 
 @keyframes fadeIn{
 
@@ -595,9 +571,7 @@ footer p{
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -693,9 +667,7 @@ footer p{
 
 
 
-/* =========================
-   RESEARCHER INFORMATION BOX
-========================= */
+/* RESEARCHER INFORMATION BOX */
 
 #researcherBox{
     display:none;
@@ -712,9 +684,7 @@ footer p{
 }
 
 
-/* =========================
-   NORMAL RESEARCHER MODAL
-========================= */
+/* NORMAL RESEARCHER MODAL */
 
 .researcher-content{
     background:white;
@@ -746,9 +716,7 @@ footer p{
 }
 
 
-/* =========================
-   COUNTER
-========================= */
+/* COUNTER*/
 
 .researcher-counter{
     text-align:center;
@@ -767,9 +735,7 @@ footer p{
 }
 
 
-/* =========================
-   RESEARCHER PROFILE
-========================= */
+/* RESEARCHER PROFILE */
 
 .researcher-profile{
     display:flex;
@@ -782,9 +748,7 @@ footer p{
 }
 
 
-/* =========================
-   RESEARCHER IMAGE
-========================= */
+/* RESEARCHER IMAGE */
 
 .researcher-image{
     width:185px;
@@ -1094,4 +1058,14 @@ footer p{
         font-size:11px;
     }
 
+}
+
+/* FEATURE ICONS */
+
+.feature-icon{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 18px;
 }
