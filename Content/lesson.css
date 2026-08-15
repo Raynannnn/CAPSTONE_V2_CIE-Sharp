@@ -1,18 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+
+/* =========================
+   BODY
+========================= */
+
 body{
 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'VT323', monospace;
 
-    color:#e2e8f0;
+    background:#080c17;
 
-    background:#0b1020;
+    color:#cbd5e1;
 
     line-height:1.6;
+
+    font-size:18px;
 
 }
 
@@ -74,7 +88,9 @@ body{
 
     color:#f8fafc;
 
-    font-size:20px;
+    font-family:'Press Start 2P', cursive;
+
+    font-size:16px;
 
 }
 
@@ -83,7 +99,9 @@ body{
 
     color:#64748b;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:15px;
 
     text-transform:uppercase;
 
@@ -108,7 +126,7 @@ body{
 
     border-radius:7px;
 
-    font-size:13px;
+    font-size:17px;
 
     font-weight:bold;
 
@@ -122,6 +140,8 @@ body{
     background:#334155;
 
     color:white;
+
+    transform:translateX(-3px);
 
 }
 
@@ -154,7 +174,9 @@ body{
 
     color:#64748b;
 
-    font-size:9px;
+    font-family:'VT323', monospace;
+
+    font-size:14px;
 
     font-weight:bold;
 
@@ -167,7 +189,9 @@ body{
 
     color:#60a5fa;
 
-    font-size:17px;
+    font-family:'Press Start 2P', cursive;
+
+    font-size:12px;
 
 }
 
@@ -176,7 +200,9 @@ body{
 
     color:#cbd5e1;
 
-    font-size:12px;
+    font-family:'VT323', monospace;
+
+    font-size:17px;
 
 }
 
@@ -214,7 +240,9 @@ body{
 }
 
 
-/* Dungeon lines */
+/* =========================
+   DUNGEON GRID
+========================= */
 
 .game-world::before{
 
@@ -246,7 +274,9 @@ body{
 }
 
 
-/* Glow */
+/* =========================
+   DUNGEON GLOW
+========================= */
 
 .dungeon-glow{
 
@@ -346,7 +376,7 @@ body{
 
     display:inline-block;
 
-    padding:6px 14px;
+    padding:7px 15px;
 
     border:1px solid #334155;
 
@@ -356,13 +386,15 @@ body{
 
     color:#60a5fa;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:17px;
 
     font-weight:bold;
 
     letter-spacing:1.5px;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
 
 }
 
@@ -371,11 +403,19 @@ body{
 
     color:#f8fafc;
 
-    font-size:45px;
+    font-family:'Press Start 2P', cursive;
 
-    line-height:1.1;
+    font-size:32px;
 
-    margin-bottom:14px;
+    line-height:1.5;
+
+    margin-bottom:18px;
+
+    text-shadow:
+
+        3px 3px 0 #172554,
+
+        0 0 20px rgba(96,165,250,.15);
 
 }
 
@@ -388,7 +428,11 @@ body{
 
     color:#94a3b8;
 
-    font-size:15px;
+    font-family:'VT323', monospace;
+
+    font-size:21px;
+
+    line-height:1.6;
 
 }
 
@@ -494,7 +538,9 @@ body{
 
     color:#cbd5e1;
 
-    font-size:11px;
+    font-family:'Press Start 2P', cursive;
+
+    font-size:9px;
 
     letter-spacing:1px;
 
@@ -505,7 +551,9 @@ body{
 
     color:#64748b;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:16px;
 
 }
 
@@ -609,7 +657,9 @@ body{
 
     color:#60a5fa;
 
-    font-size:34px;
+    font-family:'Press Start 2P', cursive;
+
+    font-size:25px;
 
     font-weight:bold;
 
@@ -626,7 +676,9 @@ body{
 
     color:#93c5fd;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:17px;
 
     font-weight:bold;
 
@@ -639,11 +691,15 @@ body{
 
     color:white;
 
-    font-size:29px;
+    font-family:'Press Start 2P', cursive;
+
+    font-size:19px;
+
+    line-height:1.7;
 
     letter-spacing:1px;
 
-    margin:5px 0;
+    margin:8px 0;
 
 }
 
@@ -665,7 +721,9 @@ body{
 
     color:#93c5fd;
 
-    font-size:11px;
+    font-family:'VT323', monospace;
+
+    font-size:18px;
 
     letter-spacing:3px;
 
@@ -705,7 +763,9 @@ body{
 
     color:#2563eb;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:17px;
 
     font-weight:bold;
 
@@ -720,9 +780,13 @@ body{
 
     color:#172554;
 
-    font-size:27px;
+    font-family:'Press Start 2P', cursive;
 
-    margin-bottom:12px;
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:14px;
 
 }
 
@@ -731,9 +795,11 @@ body{
 
     color:#64748b;
 
-    font-size:14px;
+    font-family:'VT323', monospace;
 
-    line-height:1.8;
+    font-size:20px;
+
+    line-height:1.7;
 
 }
 
@@ -761,7 +827,9 @@ body{
 
     color:#60a5fa;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:17px;
 
     font-weight:bold;
 
@@ -785,9 +853,13 @@ body{
 
     color:#f8fafc;
 
-    font-size:17px;
+    font-family:'Press Start 2P', cursive;
 
-    margin-bottom:8px;
+    font-size:11px;
+
+    line-height:1.7;
+
+    margin-bottom:10px;
 
 }
 
@@ -796,9 +868,11 @@ body{
 
     color:#94a3b8;
 
-    font-size:12px;
+    font-family:'VT323', monospace;
 
-    line-height:1.7;
+    font-size:17px;
+
+    line-height:1.6;
 
     margin-bottom:20px;
 
@@ -837,7 +911,9 @@ body{
 
     color:#64748b;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:15px;
 
     margin-top:7px;
 
@@ -874,7 +950,9 @@ body{
 
     color:#60a5fa;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:17px;
 
     font-weight:bold;
 
@@ -887,9 +965,13 @@ body{
 
     color:#f8fafc;
 
-    font-size:31px;
+    font-family:'Press Start 2P', cursive;
 
-    margin:7px 0;
+    font-size:22px;
+
+    line-height:1.7;
+
+    margin:8px 0;
 
 }
 
@@ -898,7 +980,9 @@ body{
 
     color:#64748b;
 
-    font-size:13px;
+    font-family:'VT323', monospace;
+
+    font-size:18px;
 
 }
 
@@ -984,7 +1068,9 @@ body{
 
     color:#475569;
 
-    font-size:11px;
+    font-family:'VT323', monospace;
+
+    font-size:16px;
 
     font-weight:bold;
 
@@ -1030,7 +1116,9 @@ body{
 
     color:#93c5fd;
 
-    font-size:8px;
+    font-family:'VT323', monospace;
+
+    font-size:14px;
 
     font-weight:bold;
 
@@ -1045,7 +1133,9 @@ body{
 
     color:white;
 
-    font-size:13px;
+    font-family:'VT323', monospace;
+
+    font-size:18px;
 
     line-height:1.4;
 
@@ -1073,9 +1163,13 @@ body{
 
     color:#f1f5f9;
 
-    font-size:17px;
+    font-family:'Press Start 2P', cursive;
 
-    margin-bottom:7px;
+    font-size:12px;
+
+    line-height:1.6;
+
+    margin-bottom:8px;
 
 }
 
@@ -1084,7 +1178,9 @@ body{
 
     color:#64748b;
 
-    font-size:12px;
+    font-family:'VT323', monospace;
+
+    font-size:17px;
 
     line-height:1.6;
 
@@ -1097,7 +1193,9 @@ body{
 
     color:#60a5fa;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:16px;
 
     font-weight:bold;
 
@@ -1110,7 +1208,9 @@ body{
 
     color:#475569;
 
-    font-size:10px;
+    font-family:'VT323', monospace;
+
+    font-size:16px;
 
     font-weight:bold;
 
@@ -1158,7 +1258,7 @@ body{
 
 
 /* =========================
-   TIP
+   GAME TIP
 ========================= */
 
 .game-tip{
@@ -1215,7 +1315,11 @@ body{
 
     color:#f1f5f9;
 
-    font-size:11px;
+    font-family:'Press Start 2P', cursive;
+
+    font-size:9px;
+
+    line-height:1.6;
 
     letter-spacing:1px;
 
@@ -1226,7 +1330,9 @@ body{
 
     color:#64748b;
 
-    font-size:12px;
+    font-family:'VT323', monospace;
+
+    font-size:17px;
 
 }
 
@@ -1252,7 +1358,9 @@ footer p{
 
     color:#475569;
 
-    font-size:11px;
+    font-family:'VT323', monospace;
+
+    font-size:15px;
 
 }
 
@@ -1336,14 +1444,14 @@ footer p{
 
     .game-logo h2{
 
-        font-size:16px;
+        font-size:11px;
 
     }
 
 
     .game-logo span{
 
-        font-size:8px;
+        font-size:12px;
 
     }
 
@@ -1362,6 +1470,15 @@ footer p{
     }
 
 
+    .back-button{
+
+        font-size:15px;
+
+        padding:6px 10px;
+
+    }
+
+
     .game-world{
 
         padding:50px 18px 70px;
@@ -1371,14 +1488,23 @@ footer p{
 
     .game-intro h1{
 
-        font-size:34px;
+        font-size:22px;
+
+        line-height:1.7;
 
     }
 
 
     .game-intro p{
 
-        font-size:13px;
+        font-size:18px;
+
+    }
+
+
+    .chapter-label{
+
+        font-size:15px;
 
     }
 
@@ -1419,6 +1545,27 @@ footer p{
     }
 
 
+    .book-cover h2{
+
+        font-size:15px;
+
+    }
+
+
+    .book-pages h2{
+
+        font-size:14px;
+
+    }
+
+
+    .book-pages p{
+
+        font-size:18px;
+
+    }
+
+
     .books-container{
 
         grid-template-columns:1fr;
@@ -1440,9 +1587,23 @@ footer p{
     }
 
 
+    .book-info h3{
+
+        font-size:10px;
+
+    }
+
+
+    .book-info p{
+
+        font-size:16px;
+
+    }
+
+
     .map-title h2{
 
-        font-size:26px;
+        font-size:17px;
 
     }
 
